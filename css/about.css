@@ -1,0 +1,96 @@
+
+#header-container {
+    position: relative;
+}
+
+#main-container {
+    position: relative;
+    padding-left: 20px;
+}
+
+section h2 {
+    color: tomato;
+}
+
+h5#happy {
+    color: red;
+    text-align: center;
+}
+
+h5#sad {
+    color: gray;
+    text-align: center;
+}
+
+div.column {
+    float: left;
+    width: 50%;
+    height: 100;
+}
+#movies-section {
+    float: right;
+}
+
+div.column img {
+    display: block;
+    border-radius: 4%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a:link {
+    color: cyan;
+}
+  
+/* visited link */
+a:visited {
+    color: green;
+}
+  
+/* mouse over link */
+a:hover {
+    color: rgb(255, 148, 105);
+}
+  
+/* selected link */
+a:active {
+    color: blue;
+}
+
+#name-block {
+    position: absolute;
+    top: 120px;
+    left: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#name-block h4 {
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
+    font-size: 24px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px;
+    color: #101010;
+}
+
+#name-block h6 {
+    padding-left: 100px;
+    font-family: Optima, "Segoe UI", sans-serif; 
+    font-size: 18px;
+    font-style: italic;
+    font-variant: normal; 
+    color: #101010;
+}
+
+#username {
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
+    font-size: 26px;
+    font-style: italic;
+    font-weight: bold;
+    color: darkred;
+}

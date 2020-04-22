@@ -1,0 +1,41 @@
+html{
+    height:100%;
+}
+
+body {
+    height:100%;
+    background: #101010;
+    color: white;
+}
+
+div.sections {
+    height: 100%;
+}
+
+section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height:100%;
+    font-family: "Comic Sans MS", cursive, serif;
+}
+
+img.cover {
+    object-fit: cover;
+    width: 100%;
+    object-position: 50% 40%;
+}
+
+img.rounded-corners {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+footer {
+    
+    bottom: 0;
+    width: 100%;
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
