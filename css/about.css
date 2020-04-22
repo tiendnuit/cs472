@@ -23,8 +23,10 @@ h5#sad {
 }
 
 div.column {
+    display: block;
     float: left;
     width: 50%;
+    height: auto;
 }
 #movies-section {
     float: right;
