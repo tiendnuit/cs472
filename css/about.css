@@ -72,7 +72,7 @@ a:active {
     padding-right: 20px;
 }
 
-#name-block h7 {
+#name-block h6 {
     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
     color: #101010;
 }
@@ -84,7 +84,7 @@ p#username:first-letter {
     padding-right: 4px;
 }
 
-#name-block h6 {
+#name-block h5 {
     padding-left: 100px;
     font-family: Optima, "Segoe UI", sans-serif; 
     font-size: 18px;
