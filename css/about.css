@@ -76,13 +76,43 @@ a:active {
 #avatar-block {
     position: absolute;
     bottom: -8%;
-    left: 50%;
+    right: 10%;
+    top:10%;
+}
+
+#avatar-block1 {
+    position: absolute;
+    bottom: -8%;
+    right: 20%;
+    top:20%;
+}
+
+#avatar-block2 {
+    position: absolute;
+    bottom: -8%;
+    right: 12%;
+    top:45%;
 }
 
 #avatar-block img {
     width: 120px;
     height: 120px;
     border: 3px solid #101010;
+    opacity:0.5;
+}
+
+#avatar-block1 img {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #101010;
+    opacity:0.5;
+}
+
+#avatar-block2 img {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #101010;
+    opacity:0.5;
 }
 
 #name-block h6 {
@@ -133,4 +163,9 @@ ol {
 
 li {
     flex: 0 0 auto;
+}
+
+section h2:first-child {
+    display: table;
+    border-bottom: 3px solid turquoise;
 }
