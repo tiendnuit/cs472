@@ -121,7 +121,7 @@ p#username:first-letter {
     color: darkturquoise;
 }
 
-#movies ol>li>ul {
+#movies dl {
     font-size: 0.8em;
     color: white;
 }
