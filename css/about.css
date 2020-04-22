@@ -75,6 +75,7 @@ a:active {
 #name-block h6 {
     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
     color: #101010;
+    font-size: 14px;
 }
 
 p#username:first-letter {
