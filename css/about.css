@@ -43,21 +43,25 @@ div.column img {
 
 a:link {
     color: cyan;
+    text-decoration: none;
 }
   
 /* visited link */
 a:visited {
     color: green;
+    text-decoration: none;
 }
   
 /* mouse over link */
 a:hover {
     color: rgb(255, 148, 105);
+    text-decoration: underline
 }
   
 /* selected link */
 a:active {
     color: blue;
+    text-decoration: none;
 }
 
 #name-block {
@@ -68,14 +72,16 @@ a:active {
     padding-right: 20px;
 }
 
-#name-block h4 {
+#name-block h7 {
     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
-    font-size: 24px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 700; 
-    line-height: 26.4px;
     color: #101010;
+}
+
+p#username:first-letter {
+    float: left;
+    font-size: 1.5em;
+    margin-top: -0.1em;
+    padding-right: 4px;
 }
 
 #name-block h6 {
@@ -88,9 +94,29 @@ a:active {
 }
 
 #username {
+    padding-left: 50px;
     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
     font-size: 26px;
     font-style: italic;
     font-weight: bold;
     color: darkred;
+}
+
+#movies ol>li {
+    font-size: 1.2em;
+    color: darkturquoise;
+}
+
+#movies ol>li>ul {
+    font-size: 0.8em;
+    color: white;
+}
+
+ol { 
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+li {
+    flex: 0 0 auto;
 }
