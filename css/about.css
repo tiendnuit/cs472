@@ -98,7 +98,7 @@ p#username:first-letter {
     padding-right: 4px;
 }
 
-#name-block h5 {
+#name-block q {
     padding-left: 100px;
     font-family: Optima, "Segoe UI", sans-serif; 
     font-size: 18px;
