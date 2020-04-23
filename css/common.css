@@ -13,6 +13,7 @@ div.sections {
 }
 
 section {
+    clear: both;
     padding-top: 10px;
     padding-bottom: 10px;
     height:100%;
@@ -31,11 +32,11 @@ img.rounded-corners {
 }
 
 footer {
-    
     bottom: 0;
     width: 100%;
-    background-color: #777;
+    background-color: rgb(27, 26, 26);
     padding: 10px;
     text-align: center;
     color: white;
+    overflow: hidden;
 }
