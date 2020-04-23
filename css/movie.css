@@ -1,11 +1,11 @@
 body {
-    background-image: url('images/movies/background.png');
+    background-image: url('/cs472/images/movies/background.png');
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 8pt;
 }
 
 #banner {
-    background-image: url('images/movies/bannerbg.png');
+    background-image: url('/cs472/images/movies/bannerbg.png');
 }
 
 h1 {
@@ -51,7 +51,7 @@ h1 {
 #content-banner {
     position:relative;
     height: 83px;
-    background-image: url('images/movies/rbg.png');
+    background-image: url('/cs472/images/movies/rbg.png');
     font-size: 48pt;
     font-weight: bold;
     color: red;
