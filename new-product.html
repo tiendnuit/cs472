@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="css/new-product.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="js/new-product.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">
@@ -35,60 +36,61 @@
         </nav>
         <div class="container">
             <h4 class="mt-4 mb-4 text-muted text-l">New Product Form</h4>
-            <!-- Row 1 -->
-            <div class="row">
-                <!-- Product Number -->
-                <div class="form-group col-sm">
-                    <label class="text-secondary" for="productNo">Product Number</label>
-                    <input type="number" required class="form-control text-secondary" id="productNo">
+            <form action="">
+                <!-- Row 1 -->
+                <div class="row">
+                    <!-- Product Number -->
+                    <div class="form-group col-sm">
+                        <label class="text-secondary" for="productNo">Product Number</label>
+                        <input type="number" required class="form-control text-secondary" id="productNo">
+                    </div>
+
+                    <div class="form-group col-sm">
+                        <label class="text-secondary" for="inputQuantity">Quantity in stock</label>
+                        <input type="number" required class="form-control text-secondary" id="inputQuantity" value="0">
+                    </div>
                 </div>
 
-                <div class="form-group col-sm">
-                    <label class="text-secondary" for="inputQuantity">Quantity in stock</label>
-                    <input type="number" required class="form-control text-secondary" id="inputQuantity" value="0">
-                </div>
-            </div>
+                <!-- Row 2 -->
+                <div class="row">
+                    <div class="form-group col-sm">
+                        <label class="text-secondary" for="inputName">Name</label>
+                        <input type="text" required class="form-control" id="inputName">
+                    </div>
 
-            <!-- Row 2 -->
-            <div class="row">
-                <div class="form-group col-sm">
-                    <label class="text-secondary" for="inputName">Name</label>
-                    <input type="text" required class="form-control" id="inputName">
-                </div>
-
-                <div class="form-group col-sm">
-                    <label class="text-secondary" for="inputSupplier">Supplier:</label>
-                    <select class="custom-select" id="inputGroupSelect01">
-                        <option selected>Select a supplier</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Row 3 -->
-            <div class="row">
-                <div class="form-group col-sm">
-                    <label class="text-secondary" for="inputUnit">Unit Price</label>
-                    <input type="number" required class="form-control text-secondary" id="inputUnit" value="0.0">
+                    <div class="form-group col-sm">
+                        <label class="text-secondary" for="inputSupplier">Supplier:</label>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Select a supplier</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="form-group col-sm">
-                    <label class="text-secondary" for="inputDate">Date Supplied</label>
-                    <input type="date" required class="form-control text-secondary" id="inputDate" aria-describedby="dateHelp">
-                    <small id="dateHelp" class="form-text text-muted">Enter a valid Date.</small>
+                <!-- Row 3 -->
+                <div class="row">
+                    <div class="form-group col-sm">
+                        <label class="text-secondary" for="inputUnit">Unit Price</label>
+                        <input type="number" required class="form-control text-secondary" id="inputUnit" value="0.0">
+                    </div>
+
+                    <div class="form-group col-sm">
+                        <label class="text-secondary" for="inputDate">Date Supplied</label>
+                        <input type="date" required class="form-control text-secondary" id="inputDate" aria-describedby="dateHelp">
+                        <small id="dateHelp" class="form-text text-muted">Enter a valid Date.</small>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm text-right">
-                    <button class="btn btn-outline-dark text-dark mr-5" type="button" id="btnReset">Reset</button>
-                    <button class="btn btn-outline-danger text-danger mr-5" type="button" id="btnCancel">Cancel</button>
-                    <button class="btn btn-outline-primary text-primary" type="button" id="btnAdd">Add Product</button>
+                <div class="row">
+                    <div class="col-sm text-right">
+                        <button class="btn btn-outline-dark text-dark mr-5 bg-transparent" type="reset" id="btnReset">Reset</button>
+                        <button class="btn btn-outline-danger text-danger mr-5 bg-transparent" type="button" id="btnCancel">Cancel</button>
+                        <button class="btn btn-outline-primary text-primary bg-transparent" type="button" id="btnAdd">Add Product</button>
+                    </div>
                 </div>
-            </div>
+            </form>
             
         </div>
-        
     </body>
 </html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <head>
+        <title>Clock</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="css/clock.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="js/clock.js"></script>  
+    </head>
+    <body>
+        <div class="container">
+            <h1>CLOCK</h1>
+            <p>
+                <h5>1.	Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.</h5>
+                <code>
+                    let max = function (num1, num2) {<br/>
+                        &nbsp;&nbsp;&nbsp;if (num1 >= num2) return num1;<br/>
+                        &nbsp;&nbsp;&nbsp;else return num2; <br/>
+                    }<br/>
+                    //Example:<br/>
+                    console.log("=================");<br/>
+                    console.log("1. Max of (5, 3): " + max(5,3));<br/>
+                </code>
+            </p>
+
+            <p>
+                <h5>2.	Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them. </h5>
+                <code>
+                    let maxOfThree = function (num1, num2, num3) {<br/>
+                        &nbsp;&nbsp;&nbsp;let max = num1;<br/>
+                        &nbsp;&nbsp;&nbsp;if (max < num2) max = num2;<br/>
+                        &nbsp;&nbsp;&nbsp;if (max < num3) max = num3;<br/>
+                    
+                        &nbsp;&nbsp;&nbsp;return max;<br/>
+                    }
+                    //Example: <br/>
+                    console.log("=================");<br/>
+                    console.log("2. Max of (9, 5, 1): " + maxOfThree(9, 5, 1));<br/>
+                </code>
+            </p>
+
+            <p>
+                <h5>
+                    3.	Write a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. 
+                </h5>
+                <code>
+                    let isVowel = function(character) {<br/>
+                        &nbsp;&nbsp;&nbsp;if (!character || character.lenght > 1) return false;<br/>
+                        &nbsp;&nbsp;&nbsp;let vowel = "aeiou";<br/>
+                        
+                        &nbsp;&nbsp;&nbsp;return vowel.includes(character);<br/>
+                    }
+                    //Example: <br/>
+                    console.log("=================");<br/>
+                    console.log("3. e isVowel: " + isVowel("e"));<br/>
+                </code>
+            </p>
+
+            <p>
+                <h5>
+                    4.	Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an input array of numbers.<br/> 
+                    For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24. <br/>
+                    Note/Hint: Do these using Imperative programming approach (i.e. for…loop or while…loop) <br/>
+                </h5>
+                <code>
+                    let sum = function(arr) {<br/>
+                        &nbsp;&nbsp;&nbsp;if (!arr || !(Array.isArray(arr))) return 0;<br/>
+                        &nbsp;&nbsp;&nbsp;let sum = 0;<br/>
+                        &nbsp;&nbsp;&nbsp;for (i = 0; i < arr.length; i++) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;sum += arr[i];<br/>
+                            &nbsp;&nbsp;&nbsp;}<br/>
+                    
+                            &nbsp;&nbsp;&nbsp;return sum;<br/>
+                    }<br/>
+                    //Example: <br/>
+                    var arr = [1, 2, 3, 4];<br/>
+                    console.log("=================");<br/>
+                    console.log("4. Sums and Multiplies of (1, 2, 3, 4): ");<br/>
+                    console.log("Sum: " + sum(arr));<br/>
+                    <br/>
+                    let multiply = function(arr) {<br/>
+                        &nbsp;&nbsp;&nbsp;if (!arr || !(Array.isArray(arr))) return 0;<br/>
+                        &nbsp;&nbsp;&nbsp;let i = 0;<br/>
+                        &nbsp;&nbsp;&nbsp;let total = 1;<br/>
+                        &nbsp;&nbsp;&nbsp;while (i < arr.length) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;total *= arr[i];<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;i++;<br/>
+                            &nbsp;&nbsp;&nbsp;}
+                    
+                        &nbsp;&nbsp;&nbsp;return total;<br/>
+                    }<br/>
+                    
+                    //Example: <br/>
+                    console.log("Total: "+ multiply(arr));<br/>
+                </code>
+            </p>
+            <p>
+                <h5>
+                    5.	Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj". 
+                </h5>
+                <code>
+                    let reverse = function(str) {<br/>
+                        &nbsp;&nbsp;if (!str) return "";<br/>
+                        &nbsp;&nbsp;let result = "";<br/>
+                        &nbsp;&nbsp;let i = str.length - 1;<br/>
+                        &nbsp;&nbsp;while (i >= 0) {<br/>
+                            &nbsp;&nbsp;&nbsp;result += str.substring(i, i+1);<br/>
+                            &nbsp;&nbsp;&nbsp;i--;<br/>
+                            &nbsp;&nbsp;}<br/>
+                            &nbsp;&nbsp;return result;<br/>
+                    }<br/>
+                    
+                    //Example: <br/>
+                    console.log("=================");<br/>
+                    console.log("5. Reversal of 'jag testar': " + reverse("jag testar"));<br/>
+                </code>
+            </p>
+
+            <p>
+                <h5>
+                    6.	Write a function findLongestWord() that takes an array of words and returns the length of the longest one
+                </h5>
+                <code>
+                    let findLongestWord = function(arr) {<br/>
+                        &nbsp;&nbsp;if (!arr || !(Array.isArray(arr))) return 0;<br/>
+                        &nbsp;&nbsp;let maxLength = 0;<br/>
+                        &nbsp;&nbsp;for (i = 0; i < arr.length; i++) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;if (maxLength < arr[i].length) maxLength = arr[i].length;<br/>
+                            &nbsp;&nbsp;}<br/>
+                            &nbsp;&nbsp;return maxLength;<br/>
+                    }<br/>
+                    
+                    //Example: <br/>
+                    console.log("=================");<br/>
+                    console.log("6. Length of the longest: " + findLongestWord(["jag testar", "aaad", "re", "1234567", "1", "poiuyt"]));<br/>
+                </code>
+            </p>
+
+            <p>
+                <h5>
+                    7.	Write a function filterLongWords() that takes an array of words <br/>
+                    and an integer i and returns a new array containing only those words that were longer than i characters.
+                </h5>
+                <code>
+                    let filterLongWords = function(arr, len) {<br/>
+                        &nbsp;&nbsp;if (!arr || !len || !(Array.isArray(arr))) return null;<br/>
+                        &nbsp;&nbsp;let result = [];<br/>
+                        &nbsp;&nbsp;for (i = 0; i < arr.length; i++) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;if (len < arr[i].length) result.push(arr[i]);<br/>
+                            &nbsp;&nbsp;}<br/>
+                    
+                            &nbsp;&nbsp;return result;<br/>
+                    }<br/>
+                    
+                    //Example: <br/>
+                    console.log("=================");<br/>
+                    console.log("7. Filter Long Words: " + filterLongWords(["testar", "aaad", "re", "1234567", "1", "poiuyt"], 5));<br/>
+                </code>
+            </p>
+
+            <p>
+                <h5>
+                    8.	Write a function named, computeSumOfSquares, that takes as input, an array of numbers <br/>
+                    and calculates and returns the sum of the squares of each number in the input array. <br/>
+                    E.g. computeSumOfSquares([1,2,3]) should be computed as 12 + 22 +32 = 14. <br/>
+                    Note: Write your Javascript code without using Imperative programming. i.e. <br/>
+                    Do NOT use any explicit looping construct; instead use functional programming style/approach.<br/>
+                </h5>
+                <code>
+                    let computeSumOfSquares = function(arr) {<br/>
+                        &nbsp;&nbsp;if (!arr || !(Array.isArray(arr))) return 0;<br/>
+                        &nbsp;&nbsp;return arr.reduce(function(prevVal, elem, i, array) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return prevVal + elem * elem;<br/>
+                            &nbsp;&nbsp;}, 0)<br/>
+                    }<br/>
+                    
+                    //Example: <br/>
+                    console.log("=================");<br/>
+                    console.log("8. Compute SumOfSquares: " + computeSumOfSquares([1,2,3]));<br/>
+                </code>
+            </p>
+            <p>
+                <h5>
+                    9.	Write a function named, printOddNumbersOnly, that takes as input, an array of integral numbers and it finds and prints only the numbers which are odd.
+                </h5>
+                <code>
+                    let printOddNumbersOnly = function(arr) {<br/>
+                        &nbsp;&nbsp;if (!arr || !(Array.isArray(arr))) return;<br/>
+                        &nbsp;&nbsp;arr.filter(function(elem, i, array) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return !isNaN(arr[i]) && arr[i] % 2 != 0;<br/>
+                            &nbsp;&nbsp;}).forEach(function(currentValue, index, arr) {<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;console.log(currentValue);<br/>
+                            &nbsp;&nbsp;})<br/>
+                        
+                    }<br/>
+                    
+                    //Example: <br/>
+                    console.log("=================");<br/>
+                    console.log("9. printOddNumbersOnly: ");<br/>
+                    printOddNumbersOnly([1, 2, 3, "test", "5"])<br/>
+                </code>
+            </p>
+
+            <p>
+                <h5>
+                    10.	Write a function named, computeSumOfSquaresOfEvensOnly, that takes as input, an array of integral numbers <br/>
+                    and calculates and returns the sum of the squares of only the even numbers in the input array. <br/>
+                    E.g. computeSumOfSquaresOfEvensOnly ([1,2,3,4,5]) should be computed as 22 +42 = 20.<br/>
+                </h5>
+                <code>
+                    let computeSumOfSquaresOfEvensOnly = function(arr) {<br/>
+                        &nbsp;&nbsp;if (!arr || !(Array.isArray(arr))) return;<br/>
+                        &nbsp;&nbsp;return arr.filter(function(elem, i, array) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return !isNaN(elem) && elem % 2 == 0;<br/>
+                        &nbsp;&nbsp;}).reduce(function(prevVal, elem, i, array) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return prevVal + elem * elem;<br/>
+                        &nbsp;&nbsp;}, 0);<br/>
+                    }<br/>
+                    
+                    //Example: <br/>
+                    console.log("=================");<br/>
+                    console.log("10. Compute SumOfSquaresOfEvensOnly: " + computeSumOfSquaresOfEvensOnly([1, 2, 3, 4, 5]));<br/>
+                </code>
+            </p>
+
+            <p>
+                <h5>
+                    11.	Using the Array.reduce(…) function, re-implement your functions, sum(…) and multiply(…) (defined in Problem 4 above) 
+                    without using Imperative programming. i.e. Do NOT use any explicit looping construct; instead use functional programming style/approach. 
+                </h5>
+                <code>
+                    let newSum = function(arr) {<br/>
+                        &nbsp;&nbsp;if (!arr || !(Array.isArray(arr))) return 0;<br/>
+                        &nbsp;&nbsp;return arr.reduce(function(pre, ele, i, array) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return pre + ele;<br/>
+                        &nbsp;&nbsp;}, 0);<br/>
+                    }<br/>
+                    
+                    // multiply() function<br/>
+                    let newMultiply = function(arr) {<br/>
+                        &nbsp;&nbsp;if (!arr || !(Array.isArray(arr))) return 0;<br/>
+                        &nbsp;&nbsp;return arr.reduce(function(pre, ele, i, array) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return pre * ele;<br/>
+                        &nbsp;&nbsp;}, 1);<br/>
+                    }<br/>
+                    //Example: <br/>
+                    var arrs = [1, 2, 3, 4];<br/>
+                    console.log("=================");<br/>
+                    console.log("11. Sums and Multiplies of (1, 2, 3, 4): ");<br/>
+                    console.log("NewSum: " + newSum(arrs));<br/>
+                    console.log("NewMultiply: " + newMultiply(arrs));<br/>
+                </code>
+            </p>
+
+            <p>
+                <h5>
+                    12.	Implement Javascript code for a function named, findSecondBiggest, <br/>
+                    which takes as input, an array of numbers and finds and returns the second biggest of the numbers. <br/>
+                    For example, findSecondBiggest([1,2,3,4,5]) should return 4. And findSecondBiggest([19,9,11,0,12]) should return 12. <br/>
+                    (Note: Do not use sorting!)<br/>
+                </h5>
+                <code>
+                    let findSecondBiggest = function(arr) {<br/>
+                        &nbsp;&nbsp;if (!arr || !(Array.isArray(arr))) return null;<br/>
+                        &nbsp;&nbsp;let biggest = null;<br/>
+                        &nbsp;&nbsp;let secondBiggest = null;<br/>
+                        &nbsp;&nbsp;for (i = 0; i< arr.length; i++) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;if (!biggest) biggest = arr[i];<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;else if (biggest <= arr[i]) {<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secondBiggest = biggest;<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;biggest = arr[i];<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;} else if (!secondBiggest || secondBiggest < arr[i]) {<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secondBiggest = arr[i];<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+                            &nbsp;&nbsp;}<br/>
+                            &nbsp;&nbsp;return secondBiggest;<br/>
+                    }<br/>
+                    //Example: <br/>
+                    console.log("12. Find SecondBiggest of (19,9,11,0,12): " + findSecondBiggest([19,9,11,0,12]));<br/>
+                </code>
+            </p>
+
+            <p>
+                <h5>
+                    13.	Write a function named printFibo, that takes as input, a given length, n, and any two starting numbers a and b, <br/>
+                    and it prints-out the Fibonacci sequence, e.g. (0, 1, 1, 2, 3, 5, 8, 13, 21, 34,…) of the given length, <br/>
+                    beginning with a and b. (e.g. printFibo(n=1, a=0, b=1), prints-out: "0", as output; printFibo(n=2, a=0, b=1), <br/>
+                    prints-out: "0, 1", as output; printFibo(n=3, a=0, b=1), prints-out: "0, 1, 1", as output; printFibo(n=6, a=0, b=1), <br/>
+                    prints-out: "0, 1, 1, 2, 3, 5", as output; and printFibo(n=10, a=0, b=1), prints-out: "0, 1, 1, 2, 3, 5, 8, 13, 21, 34", as output).<br/>
+                </h5>
+                <code>
+                    let printFibo = function(n, a, b) {<br/>
+                        &nbsp;&nbsp;let count = 2;<br/>
+                        &nbsp;&nbsp;let results = [a, b];<br/>
+                        &nbsp;&nbsp;while (count < n) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;let temp = a + b;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;a = b;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;b = temp;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;results.push(temp);<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;count++;<br/>
+                        &nbsp;&nbsp;}<br/>
+                    
+                        &nbsp;&nbsp;console.log(results.toString());<br/>
+                    }<br/>
+                    //Example: <br/>
+                    console.log("13. Print Fibo of (10, 0, 1): ");<br/>
+                    printFibo(10, 0, 1);<br/>
+                </code>
+            </p>
+
+            <p>
+                <h5>
+                    14.	Refer to your work on Lab Assignment 4. Add Javascript code to work with your 2 HTML forms as follows:
+                </h5>
+                <ol>
+                    <li><a href="/cs472/login.html">Login Form</a></li>
+                    <li><a href="/cs472/new-product.html">New Product Form</a></li>
+                </ol>
+            </p>
+
+            <p>
+                <h5>
+                    15.	Using JavaScript and HTML and CSS, implement a webpage that displays a working, <br/>
+                    ticking counter Clock, that counts/displays the current Date and time of the browser host, <br/>
+                    in the format: 2019-11-4 12:16:01  <br/>
+                </h5>
+                <p>
+                    <p id="date-string">00-00-00 00:00:00</p>
+                    <p class="date">
+                        <span id="year">00</span>-<span id="month">00</span>-<span id="day">00</span>
+                        <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>
+                    </p>
+                    
+                </p>
+            </p>
+        </div>
+        
+    </body>
+</html>

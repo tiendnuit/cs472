@@ -7,11 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="css/login.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="js/login.js"></script>  
     </head>
     <body>
         <div class="container">
             <h1>LOGIN</h1>
-            <form id="login-form">
+            <form id="login-form" onsubmit="login()">
                 <!-- Email -->
                 <div class="form-group">
                   <label for="inputEmail">Email address</label>
@@ -22,7 +23,7 @@
                 <!-- Password -->
                 <div class="form-group">
                   <label for="inputPassword">Password</label>
-                  <input type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" title="Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter" class="form-control" id="inputPassword">
+                  <input type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" title="Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter" class="form-control" id="inputPassword" autocomplete="on">
                 </div>
 
                 <!-- URL -->
@@ -36,7 +37,7 @@
                   <input type="checkbox" class="form-check-input" id="checkbox">
                   <label class="form-check-label" for="checkbox">Check me out</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" id="btnSubmit">Submit</button>
             </form>
         </div>
         

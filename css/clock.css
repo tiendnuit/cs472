@@ -1,0 +1,36 @@
+#date-string {
+    color: red;
+    text-align: center;
+    font-size: 30pt;
+}
+
+.date {
+    text-align: center;
+    font-size: 30pt;
+}
+
+#year {
+    color: red;
+}
+
+#month {
+    color: turquoise;
+}
+
+#day {
+    color: tomato;
+}
+
+#hour {
+    color: springgreen;
+}
+
+#minute {
+    color: violet;
+}
+
+#second {
+    color: royalblue;
+}
+
+
