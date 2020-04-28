@@ -45,7 +45,7 @@ console.log("3. e isVowel: " + isVowel("e"));
 let sum = function(arr) {
     if (!arr || !(Array.isArray(arr))) return 0;
     let sum = 0;
-    for (i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         sum += arr[i];
     }
 
@@ -97,7 +97,7 @@ console.log("5. Reversal of 'jag testar': " + reverse("jag testar"));
 let findLongestWord = function(arr) {
     if (!arr || !(Array.isArray(arr))) return 0;
     let maxLength = 0;
-    for (i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         if (maxLength < arr[i].length) maxLength = arr[i].length;
     }
     return maxLength;
@@ -115,7 +115,7 @@ console.log("6. Length of the longest: " + findLongestWord(["jag testar", "aaad"
 let filterLongWords = function(arr, len) {
     if (!arr || !len || !(Array.isArray(arr))) return null;
     let result = [];
-    for (i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         if (len < arr[i].length) result.push(arr[i]);
     }
 
@@ -135,7 +135,7 @@ console.log("7. Filter Long Words: " + filterLongWords(["testar", "aaad", "re", 
 */
 let computeSumOfSquares = function(arr) {
     if (!arr || !(Array.isArray(arr))) return 0;
-    return arr.reduce(function(prevVal, elem, i, array) {
+    return arr.reduce(function(prevVal, elem) {
         return prevVal + elem * elem;
     }, 0)
 }
@@ -149,9 +149,9 @@ console.log("8. Compute SumOfSquares: " + computeSumOfSquares([1,2,3]));
 */
 let printOddNumbersOnly = function(arr) {
     if (!arr || !(Array.isArray(arr))) return;
-    arr.filter(function(elem, i, array) {
+    arr.filter(function(elem, i) {
         return !isNaN(arr[i]) && arr[i] % 2 != 0;
-    }).forEach(function(currentValue, index, arr) {
+    }).forEach(function(currentValue) {
         console.log(currentValue);
     })
     
@@ -169,9 +169,9 @@ printOddNumbersOnly([1, 2, 3, "test", "5"])
 */
 let computeSumOfSquaresOfEvensOnly = function(arr) {
     if (!arr || !(Array.isArray(arr))) return;
-    return arr.filter(function(elem, i, array) {
+    return arr.filter(function(elem) {
         return !isNaN(elem) && elem % 2 == 0;
-    }).reduce(function(prevVal, elem, i, array) {
+    }).reduce(function(prevVal, elem) {
         return prevVal + elem * elem;
     }, 0);
 }
@@ -187,7 +187,7 @@ console.log("10. Compute SumOfSquaresOfEvensOnly: " + computeSumOfSquaresOfEvens
 // sum() function
 let newSum = function(arr) {
     if (!arr || !(Array.isArray(arr))) return 0;
-    return arr.reduce(function(pre, ele, i, array) {
+    return arr.reduce(function(pre, ele) {
         return pre + ele;
     }, 0);
 }
@@ -195,7 +195,7 @@ let newSum = function(arr) {
 // multiply() function
 let newMultiply = function(arr) {
     if (!arr || !(Array.isArray(arr))) return 0;
-    return arr.reduce(function(pre, ele, i, array) {
+    return arr.reduce(function(pre, ele) {
         return pre * ele;
     }, 1);
 }
@@ -216,7 +216,7 @@ let findSecondBiggest = function(arr) {
     if (!arr || !(Array.isArray(arr))) return null;
     let biggest = null;
     let secondBiggest = null;
-    for (i = 0; i< arr.length; i++) {
+    for (let i = 0; i< arr.length; i++) {
         if (!biggest) biggest = arr[i];
         else if (biggest <= arr[i]) {
             secondBiggest = biggest;

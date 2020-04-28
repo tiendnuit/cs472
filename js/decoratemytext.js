@@ -1,4 +1,5 @@
 window.onload = function() {
+    "use strict";
     setupEvents();
 };
 
@@ -6,6 +7,7 @@ function setupEvents() {
     document.getElementById("btn-bigger").onclick = autoIncreaseFont;
     document.getElementById("bling").onchange = onBlingChange;
     document.getElementById("igpay").onclick = pigLatinButtonClicked;
+    document.getElementById("malkovitch").onclick = malkovitchButtonClicked
 }
 
 const helloAlert = function() {
@@ -44,17 +46,12 @@ const pigLatinButtonClicked = function() {
 
     let results = [];
     
-    for (i = 0; i < lines.length; i++) {
-        let words = lines[i].split(/\s+/);
-        let newWords = [];
-        for (j = 0; j < words.length; j++) {
-            let newStr = pigLatinConvert(words[j]);
-            newWords.push(newStr);
-        }
+    for (let line in lines) {
+        let words = line.split(/\s+/);
+        let newWords = words.map(w => pigLatinConvert(w))
         results.push(newWords.join(" "));
     }
     
-    console.log("===> : " + results.length);
     document.getElementById("textInput").value = results.join("\n");
 }
 
@@ -80,5 +77,22 @@ const pigLatinConvert = function(str) {
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+}
+
+function malkovitchButtonClicked() {
+    let textInput = document.getElementById("textInput").value;
+    let lines = textInput.split("\n");
+    let results = [];
+    
+    for (let line in lines) {
+        let words = line.split(/\s+/);
+        let newWords = words.map(w => {
+            if (w.length < 5) return w;
+            return "Malkovitch";
+        })
+        results.push(newWords.join(" "));
+    }
+
+    document.getElementById("textInput").value = results.join("\n");
+}
   
