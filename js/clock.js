@@ -1,5 +1,7 @@
+var clockTimer;
 window.onload = function() {
-    this.setInterval(tick, 1000);
+    clockTimer = this.setInterval(tick, 1000);
+    document.getElementById("stop-clock").onclick = clockTimerClicked;
 };
 
 const tick = function() {
@@ -19,8 +21,23 @@ const tick = function() {
     document.getElementById("second").innerHTML = leadingZeroFormat(today.getSeconds());
 };
 
+const clockTimerClicked = function() {
+    let stopButton = document.getElementById("stop-clock");
+    let title = stopButton.title;
+    if (title === "Stop") {
+        clearInterval(clockTimer);
+        stopButton.innerHTML = "Start";
+        stopButton.title = "Start";
+    } else if (title === "Start") {
+        clockTimer = setInterval(tick, 1000);
+        stopButton.innerHTML = "Stop";
+        stopButton.title = "Stop";
+    }
+}
+
+
 const leadingZeroFormat = function(n) {
     if (n < 10) return "0" + n;
     return n;
-}
+};
 
