@@ -46,9 +46,11 @@ const pigLatinButtonClicked = function() {
 
     let results = [];
     
-    for (let line in lines) {
+    for (let line of lines) {
+        console.log("line: " + line);
         let words = line.split(/\s+/);
-        let newWords = words.map(w => pigLatinConvert(w))
+        console.log("words: " + words);
+        let newWords = words.map(w => pigLatinConvert(w));
         results.push(newWords.join(" "));
     }
     
@@ -56,6 +58,7 @@ const pigLatinButtonClicked = function() {
 }
 
 const pigLatinConvert = function(str) {
+    console.log("===: "+ str);
     if (str.length == 0) return "";
     let firstChar = str.charAt(0);
     let isUpperCase = false;
@@ -84,7 +87,7 @@ function malkovitchButtonClicked() {
     let lines = textInput.split("\n");
     let results = [];
     
-    for (let line in lines) {
+    for (let line of lines) {
         let words = line.split(/\s+/);
         let newWords = words.map(w => {
             if (w.length < 5) return w;
