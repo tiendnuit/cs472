@@ -87,6 +87,33 @@ let reverse = function(str) {
     return result;
 }
 
+let reverse1 = function(str) {
+    if (!str) return "";
+    let len = str.length
+    let index = len - 1;
+    while (index >= 0) {
+        str += str.substring(index, index+1);
+        index--;
+    }
+    return str.substring(len, len+len);
+}
+
+let reverse2 = function(str) {
+    if (!str) return "";
+    let len = str.length
+    let index = 0;
+    let midIndex = parseInt((len-1)/2);
+    while (index <= midIndex) {
+        let revIndex = len - 1 - index;
+        let revChar = str.substring(revIndex, revIndex+1);
+        let currChar = str.substring(index, index+1);
+        str = str.substring(0, index) + revChar + str.substring(index + revChar.length);
+        str = str.substring(0, revIndex) + currChar + str.substring(revIndex + revChar.length);
+        index++;
+    }
+    return str;
+}
+
 //Example: 
 console.log("=================");
 console.log("5. Reversal of 'jag testar': " + reverse("jag testar"));
