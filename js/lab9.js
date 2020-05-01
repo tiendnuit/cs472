@@ -149,7 +149,13 @@ console.log(peter.toString());
     the values entered in the input fields are printed to the Console. Do this using mostly JQuery API. 
     Note: Prevent the form submission operation from doing a post-back/page reload.
 
+    URL: https://github.com/tiendnuit/cs472/blob/master/js/login.js
+
+
+
     b.	New Product Form: Add code such that when the form is submitted by a click on the Submit button, 
     the values entered in the input fields are displayed in a <div> block that appears below of the form. 
-    Note: Prevent the form submission operation from doing a post-back/page reload.      
+    Note: Prevent the form submission operation from doing a post-back/page reload.    
+    
+    URL: https://github.com/tiendnuit/cs472/blob/master/js/new-product.js
 */
