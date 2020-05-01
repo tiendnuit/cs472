@@ -1,7 +1,20 @@
-window.onload = function() {
-    document.getElementById("btnAdd").onclick = addProduct;
-};
+$(document).ready(function(){
+    $("#new-product-form").submit(function(e) {
+        let message = `Product No: ${$("#productNo").val()} - `;
+        message += `Quantity in stock: ${$("#inputQuantity").val()} - `;
+        message += `Name: ${$("#inputName").val()} - `;
+        message += `Supplier: ${$("#inputGroupSelect01").val()} - `;
+        message += `Unit price: ${$("#inputUnit").val()} - `;
+        message += `Date Supplied: ${$("#inputDate").val()}`;
 
+        console.log(message);
+        const newElement = $("<div>", {"text":message});
+        $("#container").append(newElement);
+        e.preventDefault();
+    });
+});
+
+/* ==> Using DOM
 function addProduct() {
     let productNo = document.getElementById("productNo").value;
     let inputQuantity = document.getElementById("inputQuantity").value;
@@ -18,3 +31,4 @@ function addProduct() {
     message += "Date Supplied: " + inputDate + "\n"
     alert(message);
 };
+*/

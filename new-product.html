@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="css/new-product.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="js/jquery-3.5.0.js"></script>
         <script src="js/new-product.js"></script>
     </head>
     <body>
@@ -34,9 +35,9 @@
                 <button class="btn btn-outline-light bg-white text-dark" type="button" id="btnSubmit">Sign Out</button>
             </form>
         </nav>
-        <div class="container">
+        <div id="container">
             <h4 class="mt-4 mb-4 text-muted text-l">New Product Form</h4>
-            <form action="">
+            <form id="new-product-form">
                 <!-- Row 1 -->
                 <div class="row">
                     <!-- Product Number -->
@@ -86,7 +87,7 @@
                     <div class="col-sm text-right">
                         <button class="btn btn-outline-dark text-dark mr-5 bg-transparent" type="reset" id="btnReset">Reset</button>
                         <button class="btn btn-outline-danger text-danger mr-5 bg-transparent" type="button" id="btnCancel">Cancel</button>
-                        <button class="btn btn-outline-primary text-primary bg-transparent" type="button" id="btnAdd">Add Product</button>
+                        <button class="btn btn-outline-primary text-primary bg-transparent" type="submit" id="btnAdd">Add Product</button>
                     </div>
                 </div>
             </form>
